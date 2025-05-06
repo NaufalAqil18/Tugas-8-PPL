@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manajemen Produk</title>
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color:green">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <h1>{% block title %}{% endblock %}</h1>
+    {% block content %}{% endblock %}
+</body>
+</html>

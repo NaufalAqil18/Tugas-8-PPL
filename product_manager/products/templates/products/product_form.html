@@ -1,0 +1,10 @@
+{% extends 'products/base.html' %}
+{% block title %}Form Produk{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Simpan</button>
+    </form>
+    <a href="{% url 'product_list' %}">Kembali ke Daftar</a>
+{% endblock %}
