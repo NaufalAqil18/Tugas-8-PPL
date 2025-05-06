@@ -4,26 +4,27 @@ Sistem manajemen produk sederhana menggunakan Django. Aplikasi ini memungkinkan 
 
 ## 🚀 Fitur
 
-- ✅ Tambah Produk
-- 📋 Lihat Daftar Produk
-- ✏️ Edit Produk
-- 🗑️ Hapus Produk
-- 💬 Pesan notifikasi sukses setiap aksi
-- 📄 Menggunakan Django Model, Form, dan Template
+-   ✅ Tambah Produk
+-   📋 Lihat Daftar Produk
+-   ✏️ Edit Produk
+-   🗑️ Hapus Produk
+-   💬 Pesan notifikasi sukses setiap aksi
+-   📄 Menggunakan Django Model, Form, dan Template
 
 ## 🛠️ Teknologi yang Digunakan
 
-- Python 3.x
-- Django 4.x
-- HTML (Template Django)
+-   Python 3.x
+-   Django 4.x
+-   HTML (Template Django)
 
 ## 🧑‍💻 Instalasi dan Menjalankan Proyek
 
 1. **Clone repository ini**
+
 ```bash
 git clone https://github.com/NaufalAqil18/Tugas-8-PPL.git
-cd django-product-manager
-````
+cd Tugas-8-PPL
+```
 
 2. **Aktifkan virtual environment (opsional tapi disarankan)**
 
@@ -36,24 +37,28 @@ env\Scripts\activate     # Windows
 3. **Install dependencies**
 
 ```bash
-pip install -r requirements.txt  # Jika ada
-# Jika belum dibuat, install Django langsung:
-pip install django
+pip install -r requirements.txt
 ```
 
-4. **Migrasi database**
+4. **Masuk ke directori project**
+
+```bash
+cd product_manager
+```
+
+5. **Migrasi database**
 
 ```bash
 python manage.py migrate
 ```
 
-5. **Jalankan server**
+6. **Jalankan server**
 
 ```bash
 python manage.py runserver
 ```
 
-6. **Buka di browser**
+7. **Buka di browser**
 
 ```
 http://localhost:8000
@@ -67,16 +72,12 @@ http://localhost:8000
 │   ├── models.py           # Model produk
 │   ├── views.py            # Logic tampilan (CRUD)
 │   ├── urls.py             # Routing internal
-│   ├── templates/
-│   │   └── products/       # Template HTML
+│   └── templates/
+│       └── products/       # Template HTML
 ├── db.sqlite3              # Database lokal
 ├── manage.py
 └── README.md
 ```
-
-## 📄 License
-
-Proyek ini open-source dan bebas digunakan untuk pembelajaran.
 
 ---
 
