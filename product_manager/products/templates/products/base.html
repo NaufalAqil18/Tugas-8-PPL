@@ -1,15 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Manajemen Produk</title>
+    <link rel="stylesheet" href="{% static 'products/style.css' %}">
 </head>
 <body>
-    {% if messages %}
-        {% for message in messages %}
-            <p style="color:green">{{ message }}</p>
-        {% endfor %}
-    {% endif %}
-    <h1>{% block title %}{% endblock %}</h1>
-    {% block content %}{% endblock %}
+    <div class="center-wrapper">
+        <div class="container">
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="flash-message">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            <h1>{% block title %}{% endblock %}</h1>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 </body>
+
 </html>
