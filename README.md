@@ -13,9 +13,33 @@ Sistem manajemen produk sederhana menggunakan Django. Aplikasi ini memungkinkan 
 
 ## 🛠️ Teknologi yang Digunakan
 
--   Python 3.x
--   Django 4.x
+-   Python 3.11
+-   Django 5.2
 -   HTML (Template Django)
+
+## 📁 Struktur Proyek Singkat
+
+```
+Root
+├── product_manager/            # Folder utama Django project
+│   ├── product_manager/
+│   │   └── ...
+│   │
+│   ├── products/               # Aplikasi produk
+│   │   ├── models.py           # Model produk
+│   │   ├── views.py            # Logic tampilan (CRUD)
+│   │   ├── urls.py             # Routing internal
+│   │   ├── templates/
+│   │   │   └── products/       # Template HTML
+│   │   │
+│   │   ├── db.sqlite3          # Database lokal
+│   │   └── manage.py
+│   │
+│   └── .env.example            # Contoh file variabel lokal
+│
+├── requirements.txt        # Library yang dibutuhkan dalam project
+└── README.md
+```
 
 ## 🧑‍💻 Instalasi dan Menjalankan Proyek
 
@@ -46,7 +70,18 @@ pip install -r requirements.txt
 cd product_manager
 ```
 
-5. **Migrasi database**
+5. **Copy local variabel**
+
+Buat secret key yang akan digunakan oleh django.
+Secret key dapat anda buat sendiri, ataupun melalui website [ini](https://djecrety.ir/).
+
+Kemudian copy file .env dengan menjalankan code berikut dan tambahkan secret key yang dibuat di file .env.
+
+```bash
+cp .env.example .env
+```
+
+6. **Migrasi database**
 
 ```bash
 python manage.py migrate
@@ -62,21 +97,6 @@ python manage.py runserver
 
 ```
 http://localhost:8000
-```
-
-## 📁 Struktur Proyek Singkat
-
-```
-├── product_manager/        # Folder utama Django project
-├── products/               # Aplikasi produk
-│   ├── models.py           # Model produk
-│   ├── views.py            # Logic tampilan (CRUD)
-│   ├── urls.py             # Routing internal
-│   └── templates/
-│       └── products/       # Template HTML
-├── db.sqlite3              # Database lokal
-├── manage.py
-└── README.md
 ```
 
 ---

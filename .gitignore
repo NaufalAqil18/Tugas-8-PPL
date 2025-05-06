@@ -8,6 +8,9 @@ venv/
 .env/
 .venv/
 
+# Local settings
+.env
+
 # Django
 *.sqlite3
 *.log
